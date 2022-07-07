@@ -1,0 +1,6 @@
+<div class="pt-5">
+  <li class="cart"><a routerLink="/cart">
+    <i class="icon-shopping-cart"></i> Cart [{{ totalQuantity }}]</a>
+    <div class="total">{{ totalPrice | currency: 'USD' }}</div>
+  </li>
+</div>

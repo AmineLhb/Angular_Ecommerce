@@ -1,0 +1,76 @@
+<div style="width:1000px; height:500px; margin:0 auto;">
+  <div class="contact-wrap">
+    <div style="width:100px; margin:0 auto;"><h3>Product</h3></div><br>
+    <form id="addproduct" name="addproduct" class="row g-3" action="#" method="POST" (ngSubmit)="addproduct()" enctype="multipart/form-data">
+      <div class="col-12 col-md-6">
+        <label class="form-label" for="modalEditUserName">Title</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="form-control"
+          placeholder="Title"
+
+        /><br>
+      </div><br>
+      <div class="col-12 col-md-6">
+        <label class="form-label" for="modalEditUserEmail">Publisher</label>
+        <input
+          type="text"
+          id="publisher"
+          name="publisher"
+          class="form-control"
+          placeholder="Publisher"
+        />
+      </div><br>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label" for="modalEditUserPhone">Price</label>
+        <div class="input-group input-group-merge">
+          <input
+            type="text"
+            id="price"
+            name="price"
+            class="form-control phone-number-mask"
+            placeholder="Price"
+          />
+        </div><br>
+      </div>
+      <div class="col-12 col-md-6">
+        <label class="form-label" for="modalEditUserCategory">Description</label>
+        <div class="input-group input-group-merge">
+          <input
+            type="textarea"
+            id="description"
+            name="description"
+            class="form-control "
+            placeholder="Description"
+          />
+        </div><br>
+      </div><br>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label" for="Image">Image</label>
+        <input type="file" name="imageUrl" id="imageUrl" class="form-control" /><br>
+      </div><br>
+
+      <div class="col-12 col-md-6">
+        <label class="form-label" for="modalEditUserLanguage">Category</label><br>
+        <select
+          id="modalEditUserLanguage"
+          name="language"
+          class="select2 form-select"
+
+        >
+          <option value="">Select</option>
+          <option value="english" *ngFor="let product_category of categories">{{  product_category.categoryName  }}<br></option>
+
+        </select>
+      </div><br>
+
+      <div class="form-group" style="width:80px; margin-top: 60%; margin: 1% auto;">
+        <button type="submit" class="btn btn-primary me-1 me-sm-3">Submit</button>
+      </div>
+      </form>
+  </div>
+  </div>

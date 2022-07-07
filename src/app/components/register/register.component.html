@@ -1,0 +1,46 @@
+<div style="width:600px; height:550px; margin:0 auto;">
+  <div class="contact-wrap">
+    <div style="width:100px; margin:0 auto;"><h3>Register</h3></div><br>
+    <form (ngSubmit)=userRegister() class="contact-form">
+      <div class="row">
+        <div class="w-100"></div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" class="form-control" placeholder="Your first name">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" class="form-control" placeholder="Your last name">
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" [(ngModel)]="user.email" class="form-control" placeholder="Your email address">
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label for="subject">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control" placeholder="Your Password">
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-sm-12">
+          <div class="form-group" style="width:110px; margin-top: 500%; margin: 12% auto;">
+            <input type="submit" value="Register" class="btn btn-primary">
+          </div>
+          <br>
+          <div style="margin-left: 30%;">
+            <p> Do you have an account? <a routerLink="/login"> Login </a><br> </p>
+          </div>
+
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
